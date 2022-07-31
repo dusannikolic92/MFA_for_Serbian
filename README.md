@@ -38,8 +38,10 @@ conda activate aligner
 
 Then, start aligning by using the following pattern: mfa align corpus_directory dictionary acoustic_model output_directory. Because I transcribed 'test' and 'train' audio files, I have two separate codes. 
 
-mfa align --clean /Users/dusan/Desktop/input/ ~/Documents/MFA/pretrained_models/dictionary/croatian_mfa.dict  croatian_mfa /Users/dusan/Desktop/output
+mfa align --clean /Users/dusan/Desktop/Train ~/Documents/MFA/pretrained_models/dictionary/croatian_mfa.dict  croatian_mfa /Users/dusan/Desktop/output/Train
+mfa align --clean /Users/dusan/Desktop/Test ~/Documents/MFA/pretrained_models/dictionary/croatian_mfa.dict  croatian_mfa /Users/dusan/Desktop/output/Test
 
+The aligned TextGrids are now in yout output folder!
 
 
 
