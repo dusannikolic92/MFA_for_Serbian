@@ -24,9 +24,9 @@ mfa model inspect dictionary croatian_mfa
 
 ## Prepare audio and TextGrids
 
-Now your task is to transcribe your recordings in Praat. The audio library I used is the Serbian dataset from CommonVoice (https://commonvoice.mozilla.org/en/datasets), which also includes transcriptions of the audio, that is, full sentences transcription. These sentences are not aligned in Praat and there are no TextGrids. 
+Your task is to transcribe your recordings in Praat. The audio library I used is the Serbian dataset from CommonVoice (https://commonvoice.mozilla.org/en/datasets), which also includes transcriptions of the audio, that is, full sentences transcription. These sentences are not aligned in Praat and there are no TextGrids. 
 
-To create TextGrids, either use[Prosody Pro] (http://www.homepages.ucl.ac.uk/~uclyyix/ProsodyPro/) or follow my instructions in the video here (https://youtu.be/FBqvaQJr1ig). 
+To create TextGrids, either use[Prosody Pro] (http://www.homepages.ucl.ac.uk/~uclyyix/ProsodyPro/) or follow my instructions in the video here (https://youtu.be/FBqvaQJr1ig). The audio also needs to be resampled to 16kHz, which you can do in Audacity.
 
 ## MFA Transcription
 
@@ -34,12 +34,16 @@ After I have created TextGrids, I placed both the TextGrid files and audio recor
 
 First run the aligner
 
+```
 conda activate aligner
+```
 
 Then, start aligning by using the following pattern: mfa align corpus_directory dictionary acoustic_model output_directory. Because I transcribed 'test' and 'train' audio files, I have two separate codes. 
 
+```
 mfa align --clean /Users/dusan/Desktop/Train ~/Documents/MFA/pretrained_models/dictionary/croatian_mfa.dict  croatian_mfa /Users/dusan/Desktop/output/Train
 mfa align --clean /Users/dusan/Desktop/Test ~/Documents/MFA/pretrained_models/dictionary/croatian_mfa.dict  croatian_mfa /Users/dusan/Desktop/output/Test
+```
 
 The aligned TextGrids are now in yout output folder!
 
