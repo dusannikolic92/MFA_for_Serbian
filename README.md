@@ -1,5 +1,5 @@
 # Tutorial
-This is a tutorial on how to create automatic transcription for Serbian using the Montreal Forced Aligner. The tutorial is a shorter and a written version of Dr. Chodroff's full tutorial, which you can access here. 
+This is a tutorial on how to create automatic transcription for Serbian using the Montreal Forced Aligner. The tutorial is a shorter version of Dr. Chodroff's full tutorial (https://www.eleanorchodroff.com/tutorial/montreal-forced-aligner-v1-legacy.html). 
 The tutorial covers the MacOS system, but in principle, it should work with Windows, too
 
 ## Installing MFA
@@ -13,20 +13,20 @@ conda install montreal-forced-aligner
 ## Downloading acoustic and textual dictionaries
 
 Download acoustic and textual dictionaries of Croatian from the MFA database by running these two functions in the terminal.
-
+```
 mfa model download acoustic croatian_mfa
 mfa model download dictionary croatian_mfa
-
+```
 Inspect these models to view a phone set using the mfa model inspect function.
-
+```
 mfa model inspect acoustic croatian_mfa
 mfa model inspect dictionary croatian_mfa
-
+```
 ## Prepare audio and TextGrids
 
 Your task is to transcribe your recordings in Praat. The audio library I used is the Serbian dataset from CommonVoice (https://commonvoice.mozilla.org/en/datasets), which also includes transcriptions of the audio, that is, full sentences transcription. These sentences are not aligned in Praat and there are no TextGrids. 
 
-To create TextGrids, either use[Prosody Pro] (http://www.homepages.ucl.ac.uk/~uclyyix/ProsodyPro/) or follow my instructions in the video here (https://youtu.be/FBqvaQJr1ig). The audio also needs to be resampled to 16kHz, which you can do in Audacity.
+To create TextGrids, either use (http://www.homepages.ucl.ac.uk/~uclyyix/ProsodyPro/) or follow my instructions in the video here: https://youtu.be/FBqvaQJr1ig. The audio also needs to be resampled to 16kHz, which you can do in Audacity.
 
 ## MFA Transcription
 
